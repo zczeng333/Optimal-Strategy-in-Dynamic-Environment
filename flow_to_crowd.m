@@ -8,6 +8,6 @@ for i=1:30
     for j=1:length(i_index)
         count=count+flow(i,i_index(j))*connect_i/(2*width(i,i_index(j)));
     end
-    count=count/2; %因为在便利的过程中flow是对称矩阵，遍历了两次
+    count=count/2; %因为在遍历的过程中flow是对称矩阵，遍历了两次
     crowd_out(i,:)=[count,count*0.1];
 end

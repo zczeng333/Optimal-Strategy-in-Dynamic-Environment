@@ -15,7 +15,7 @@ for i=1:cross_num   %计算每个路口车辆的流出量
         c_out=c_out+k*a*f*v_max*sig(1-f/max(f,f_max));
     end
     crowd_exchange(i)=c_out;
-end
+    endf
 for i=1:cross_num
     index=find(T(:,i)~=0);   %寻找到达该路口i的所有路口j
     new=crowd_in(i)-crowd_exchange(i);
